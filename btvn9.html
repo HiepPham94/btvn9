@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       // bài 1.
+       let characters = [ 'c', 's', 'c', '2', '6', '1' ];
+         let reverse1 = characters.reverse();
+         let one = ""; 
+          for (let i = 0; i < reverse1.length; i++) {
+            let three = one+reverse1[i];
+            one = three;
+          };
+          console.log(one);
+
+
+        // bài 2.
+        let input = prompt ("Hãy nhập số nguyên bất kỳ bạn thích");
+        if (input[0]="-") {
+            let open ="";
+            for (let i = 1; i < input.length; i++) {
+                let test = Number(input[i]);
+                if (input[i]%2===0) {
+                    let a = open + "-"+input[i];
+                    open = a;
+                } else {
+                    let b = open +input[i];
+                    open = b;
+                }   
+            }
+            console.log(open);     
+                } else {
+                let open1="";
+                for (let j = 0; j < input.length; j++) {
+                    let test = Number(input[j]);
+                if (input[j]%2===0) {
+                    let c = open1 + "-"+input[i];
+                    open1 = c;
+                } else {
+                    let d = open1 +input[i];
+                    open1 = c;
+                }      
+                }
+                console.log(open1);
+                }
+
+        // bài 3.
+        let  numbers=[1,5,8,7,9,6,5,41,2,6,55,4,8];
+        let e = numbers[1];
+        for (let w = 0; w < numbers.length; w++) {
+            if (e<=numbers[w]) {
+                e = numbers[w]
+            } else {
+                e = e;
+            }
+        }
+        console.log(e);
+
+        // bài 4: 
+
+        let array1 = prompt("Hãy nhập một chuỗi bất kỳ");
+        let j = "";
+        for (let q = 0; q < array1.length; q++) {
+            let h = array1[q].toUpperCase();
+            if (array1[q]===h) {
+                let k = array1[q].toLowerCase();
+                j=j+k;
+            } else {
+                j=j+h;
+            }
+        }
+        console.log(j);
+
+        // bài 5: 
+        let numbers2=[1,5,8,7,9,6,5,41,2,6,55,4,8];
+        let test2 = 0;
+        for (let k = 0; k < numbers2.length; k++) {
+            for (let n = k+1; n < numbers2.length; n++) {
+                if(numbers2[k]>numbers2[n]){
+                    test2 = numbers2[k];
+                    numbers2[k]=numbers2[n];
+                    numbers2[n] = test2;
+                }
+            }
+        }
+        console.log(numbers2);
+    </script>
+</body>
+</html>
